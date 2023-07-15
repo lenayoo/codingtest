@@ -1,0 +1,13 @@
+body {
+  background-image: linear-gradient(#83a4d4, #b6fbff);
+  height: 100vh;
+  padding: 20px 50px;
+}
+
+.header {
+  text-align: center;
+}
+
+div {
+  margin: 20px;
+}
