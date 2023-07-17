@@ -44,3 +44,48 @@ function numOfPencilPackage(n) {
 
 const result3 = document.querySelector('.result-3')
 result3.innerHTML = 'Answer 3: ' + numOfPencilPackage(18)
+
+// 4. 자연수 N이 입력되면 1부터 N까지의 합을 출력하는 프로그램을 작성하세요.
+
+function sumNum(n) {
+  let answer = 0
+
+  for (let i = 1; i < n + 1; i++) {
+    answer += i
+  }
+
+  return answer
+}
+
+sumNum(6)
+sumNum(10)
+
+const result4 = document.querySelector('.result-4')
+result4.innerHTML = 'Answer 4: ' + sumNum(10)
+
+//  5. 7개의 수가 주어지면 그 숫자 중 가장 작은 수를 출력하는 프로그램을 작성하세요.
+
+function findMinNum(...n) {
+  let answer
+
+  answer = Math.min(...n)
+
+  return answer
+}
+
+findMinNum(5, 3, 7, 11, 2, 15, 17)
+
+const result5 = document.querySelector('.result-5')
+result5.innerHTML = 'Answer 5: ' + findMinNum(5, 3, 7, 11, 2, 15, 17)
+
+function sumAll(...n) {
+  let answer = 0
+
+  n.forEach((element) => {
+    answer += element
+  })
+
+  console.log(answer)
+}
+
+sumAll(17, 7, 5, 5, 8, 7, 12, 15, 7, 5)

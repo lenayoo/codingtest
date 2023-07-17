@@ -11,3 +11,14 @@ body {
 div {
   margin: 20px;
 }
+
+.underline {
+  width: 80%;
+  height: 1px;
+  background-color: gray;
+  text-align: left;
+}
+
+.date {
+  font-weight: bolder;
+}
