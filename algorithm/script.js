@@ -85,7 +85,48 @@ function sumAll(...n) {
     answer += element
   })
 
-  console.log(answer)
+  return answer
 }
 
 sumAll(17, 7, 5, 5, 8, 7, 12, 15, 7, 5)
+
+// 6.7개의 자연수가 주어질 때, 이들 중 홀수인 자연수들을 모두 골라 그 합을 구하고, 고른 홀수들 중 최소값을 찾는 프로그램을 작성하세요.
+function findOddNum(arr) {
+  let answer = []
+
+  let oddNum = []
+
+  arr.forEach((num) => {
+    if (num % 2 === 1) {
+      oddNum.push(num)
+    }
+  })
+
+  const minOdd = Math.min(...oddNum)
+  const sumOdd = oddNum.reduce((acc, curr) => acc + curr, 0)
+
+  answer.push(sumOdd, minOdd)
+  return answer
+}
+
+const result6 = document.querySelector('.result-6')
+result6.innerHTML = 'Answer 6: ' + findOddNum([12, 77, 38, 41, 53, 92, 85])
+
+// 7.날짜의 일의 자리 숫자가 주어지고 7대의 자동차 번호의 끝 두 자리 수가 주어졌을 때 위반하는 자동차의 대수를 출력하는 프로그램을 작성하세요.
+
+function findIlegalPark(n, arr) {
+  let answer = []
+
+  for (let i = 0; i < arr.length; i++) {
+    if (Number(String(arr[i]).charAt(1)) === n) {
+      answer.push(arr[i])
+    }
+  }
+  return answer.length
+}
+
+console.log(findIlegalPark(3, [25, 23, 11, 47, 53, 17, 33]))
+
+const result7 = document.querySelector('.result-7')
+result7.innerHTML =
+  'Answer 7: ' + findIlegalPark(3, [25, 23, 11, 47, 53, 17, 33])
